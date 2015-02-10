@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#SBATCH --partition=general-compute
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --job-name=SEQ_BSORT
+#SBATCH --time=04:20:0
+#SBATCH --mail-user=rajaramr@buffalo.edu
+#SBATCH --output=result/Result_bsort_seq_%j.out
+#SBATCH --error=result/Result_bsort_seq_error_%j.out
+ echo "SLURM Enviroment Variables:"
+ echo "Job ID = "$SLURM_JOB_ID
+ echo "Job Name = "$SLURM_JOB_NAME
+ echo "Job Node List = "$SLURM_JOB_NODELIST
+ echo "Number of Nodes = "$SLURM_NNODES
+ echo "Tasks per Nodes = "$SLURM_NTASKS_PER_NODE
+ echo "CPUs per task = "$SLURM_CPUS_PER_TASK
+ echo "/scratch/jobid = "$SLURMTMPDIR
+ echo "submit Host = "$SLURM_SUBMIT_HOST
+ echo "Subimt Directory = "$SLURM_SUBMIT_DIR
+ echo 
+
+ulimit -s unlimited
+./bucketSort $1
+
+#
+echo "All Dones!"
+

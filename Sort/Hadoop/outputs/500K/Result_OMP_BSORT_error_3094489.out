@@ -1,0 +1,78 @@
+Currently Loaded Modulefiles:
+  1) null                         4) hadoop/1.1.1
+  2) modules                      5) myhadoop/0.2a/hadoop-1.1.1
+  3) java/j2sdk/1.6.0_22
+14/12/06 21:32:23 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = d07n07s02/10.104.7.107
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 1.1.1
+STARTUP_MSG:   build = https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.1 -r 1411108; compiled by 'hortonfo' on Mon Nov 19 10:48:11 UTC 2012
+************************************************************/
+14/12/06 21:32:23 INFO util.GSet: VM type       = 64-bit
+14/12/06 21:32:23 INFO util.GSet: 2% max memory = 36.41 MB
+14/12/06 21:32:23 INFO util.GSet: capacity      = 2^22 = 4194304 entries
+14/12/06 21:32:23 INFO util.GSet: recommended=4194304, actual=4194304
+14/12/06 21:32:23 INFO namenode.FSNamesystem: fsOwner=rajaramr
+14/12/06 21:32:23 INFO namenode.FSNamesystem: supergroup=supergroup
+14/12/06 21:32:23 INFO namenode.FSNamesystem: isPermissionEnabled=true
+14/12/06 21:32:23 INFO namenode.FSNamesystem: dfs.block.invalidate.limit=100
+14/12/06 21:32:23 INFO namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+14/12/06 21:32:23 INFO namenode.NameNode: Caching file names occuring more than 10 times 
+14/12/06 21:32:24 INFO common.Storage: Image file of size 114 saved in 0 seconds.
+14/12/06 21:32:24 INFO namenode.FSEditLog: closing edit log: position=4, editlog=/scratch/hadoop-rajaramr/data/dfs/name/current/edits
+14/12/06 21:32:24 INFO namenode.FSEditLog: close success: truncate to 4, editlog=/scratch/hadoop-rajaramr/data/dfs/name/current/edits
+14/12/06 21:32:25 INFO common.Storage: Storage directory /scratch/hadoop-rajaramr/data/dfs/name has been successfully formatted.
+14/12/06 21:32:25 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at d07n07s02/10.104.7.107
+************************************************************/
+14/12/06 21:33:16 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/12/06 21:33:17 INFO input.FileInputFormat: Total input paths to process : 1
+14/12/06 21:33:17 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/12/06 21:33:17 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/12/06 21:33:17 INFO mapred.JobClient: Running job: job_201412062132_0001
+14/12/06 21:33:18 INFO mapred.JobClient:  map 0% reduce 0%
+14/12/06 21:33:28 INFO mapred.JobClient:  map 65% reduce 0%
+14/12/06 21:33:31 INFO mapred.JobClient:  map 100% reduce 0%
+14/12/06 21:33:39 INFO mapred.JobClient:  map 100% reduce 25%
+14/12/06 21:33:42 INFO mapred.JobClient:  map 100% reduce 75%
+14/12/06 21:33:49 INFO mapred.JobClient:  map 100% reduce 100%
+14/12/06 21:33:51 INFO mapred.JobClient: Job complete: job_201412062132_0001
+14/12/06 21:33:51 INFO mapred.JobClient: Counters: 29
+14/12/06 21:33:51 INFO mapred.JobClient:   Job Counters 
+14/12/06 21:33:51 INFO mapred.JobClient:     Launched reduce tasks=4
+14/12/06 21:33:51 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=13398
+14/12/06 21:33:51 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/12/06 21:33:51 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/12/06 21:33:51 INFO mapred.JobClient:     Rack-local map tasks=1
+14/12/06 21:33:51 INFO mapred.JobClient:     Launched map tasks=1
+14/12/06 21:33:51 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=60810
+14/12/06 21:33:51 INFO mapred.JobClient:   File Output Format Counters 
+14/12/06 21:33:51 INFO mapred.JobClient:     Bytes Written=6000000
+14/12/06 21:33:51 INFO mapred.JobClient:   FileSystemCounters
+14/12/06 21:33:51 INFO mapred.JobClient:     FILE_BYTES_READ=12360944
+14/12/06 21:33:51 INFO mapred.JobClient:     HDFS_BYTES_READ=5050106
+14/12/06 21:33:51 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=18121879
+14/12/06 21:33:51 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=6000000
+14/12/06 21:33:51 INFO mapred.JobClient:   File Input Format Counters 
+14/12/06 21:33:51 INFO mapred.JobClient:     Bytes Read=5050000
+14/12/06 21:33:51 INFO mapred.JobClient:   Map-Reduce Framework
+14/12/06 21:33:51 INFO mapred.JobClient:     Map output materialized bytes=6000024
+14/12/06 21:33:51 INFO mapred.JobClient:     Map input records=50000
+14/12/06 21:33:51 INFO mapred.JobClient:     Reduce shuffle bytes=6000024
+14/12/06 21:33:51 INFO mapred.JobClient:     Spilled Records=1500000
+14/12/06 21:33:51 INFO mapred.JobClient:     Map output bytes=5000000
+14/12/06 21:33:51 INFO mapred.JobClient:     CPU time spent (ms)=45870
+14/12/06 21:33:51 INFO mapred.JobClient:     Total committed heap usage (bytes)=1868431360
+14/12/06 21:33:51 INFO mapred.JobClient:     Combine input records=0
+14/12/06 21:33:51 INFO mapred.JobClient:     SPLIT_RAW_BYTES=106
+14/12/06 21:33:51 INFO mapred.JobClient:     Reduce input records=500000
+14/12/06 21:33:51 INFO mapred.JobClient:     Reduce input groups=4
+14/12/06 21:33:51 INFO mapred.JobClient:     Combine output records=0
+14/12/06 21:33:51 INFO mapred.JobClient:     Physical memory (bytes) snapshot=953008128
+14/12/06 21:33:51 INFO mapred.JobClient:     Reduce output records=500000
+14/12/06 21:33:51 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=8079327232
+14/12/06 21:33:51 INFO mapred.JobClient:     Map output records=500000
+ls: Cannot access result: No such file or directory.

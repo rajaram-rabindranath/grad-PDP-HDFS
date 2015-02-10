@@ -1,0 +1,80 @@
+#!/bin/bash
+
+#SBATCH --partition=general-compute
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=1
+#SBATCH --job-name=HD_BSORT
+#SBATCH --time=01:20:00
+#SBATCH --mail-user=rajaramr@buffalo.edu
+#SBATCH --output=result/Result_OMP_BSORT_%j.out
+#SBATCH --error=result/Result_OMP_BSORT_error_%j.out
+ echo "SLURM Enviroment Variables:"
+ echo "Job ID = "$SLURM_JOB_ID
+ echo "Job Name = "$SLURM_JOB_NAME
+ echo "Job Node List = "$SLURM_JOB_NODELIST
+ echo "Number of Nodes = "$SLURM_NNODES
+ echo "Tasks per Nodes = "$SLURM_NTASKS_PER_NODE
+ echo "CPUs per task = "$SLURM_CPUS_PER_TASK
+ echo "/scratch/jobid = "$SLURMTMPDIR
+ echo "submit Host = "$SLURM_SUBMIT_HOST
+ echo "Subimt Directory = "$SLURM_SUBMIT_DIR
+ echo 
+
+module load myhadoop/0.2a/hadoop-1.1.1
+module list
+
+echo "MY_HADOOP_HOME="$MY_HADOOP_HOME
+echo "HADOOP_HOME="$HADOOP_HOME
+
+export HADOOP_CONF_DIR=$SLURM_SUBMIT_DIR/config
+echo "MyHadoop config directory="$HADOOP_CONF_DIR
+
+echo "Set up the configurations for myHadoop"
+export PBS_NODEFILE=nodelist.$$
+srun --nodes=${SLURM_NNODES} bash -c 'hostname' | sort > $PBS_NODEFILE
+NNuniq=`cat $PBS_NODEFILE | uniq | wc -l`
+echo "Number of nodes in nodelist="$NNuniq
+$MY_HADOOP_HOME/bin/pbs-configure.sh -n $NNuniq -c $HADOOP_CONF_DIR
+
+sleep 5
+
+
+echo "Format HDFS"
+$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR namenode -format
+
+sleep 15
+
+
+echo "start dfs"
+$HADOOP_HOME/bin/start-dfs.sh
+
+echo "start jobtracker (mapred)"
+$HADOOP_HOME/bin/start-mapred.sh
+
+sleep 15
+
+
+echo "copy file to dfs"
+$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -put $1 $1
+echo "ls files in dfs"
+$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls
+
+echo "run computation"
+$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR jar in.jar BucketSort -t $2 $3 $4 $5 8
+
+echo "ls files in dfs"
+$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR fs -ls result
+
+echo "copy files in dfs"
+$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR fs -get $4 $4
+
+
+echo "stop jobtracker (mapred)"
+$HADOOP_HOME/bin/stop-mapred.sh
+
+echo "stop dfs"
+$HADOOP_HOME/bin/stop-dfs.sh
+
+echo "Clean up"
+$MY_HADOOP_HOME/bin/pbs-cleanup.sh -n $NNuniq
+echo

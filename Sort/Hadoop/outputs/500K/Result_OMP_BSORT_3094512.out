@@ -1,0 +1,218 @@
+SLURM Enviroment Variables:
+Job ID = 3094512
+Job Name = HD_BSORT
+Job Node List = d07n07s02,d07n09s02,d07n10s01,d07n18s01,d07n19s01,d07n20s[01-02],d07n24s01,d07n25s02,d07n29s02,d07n30s[01-02],d07n31s[01-02],d07n35s01,d07n39s01
+Number of Nodes = 16
+Tasks per Nodes = 1
+CPUs per task = 
+/scratch/jobid = /scratch/3094512
+submit Host = k07n14
+Subimt Directory = /ifs/user/rajaramr/4/hbsort
+
+MY_HADOOP_HOME=/util/myhadoop/myHadoop-0.2a_hadoop-1.1.1
+HADOOP_HOME=/util/hadoop/hadoop-1.1.1
+MyHadoop config directory=/ifs/user/rajaramr/4/hbsort/config
+Set up the configurations for myHadoop
+Number of nodes in nodelist=16
+Number of Hadoop nodes requested: 16
+Generation Hadoop configuration in directory: /ifs/user/rajaramr/4/hbsort/config
+Not persisting HDFS state
+Received 16 nodes from PBS
+Master is: d07n07s02
+Configuring node: d07n07s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n09s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n10s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n18s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n19s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n20s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n20s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n24s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n25s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n29s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n30s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n30s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n31s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n31s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n35s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n39s01
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Format HDFS
+start dfs
+starting namenode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-namenode-d07n07s02.out
+d07n29s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n29s02-datanode-d07n29s02.out
+d07n10s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n10s01-datanode-d07n10s01.out
+d07n18s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n18s01-datanode-d07n18s01.out
+d07n09s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n09s02-datanode-d07n09s02.out
+d07n20s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n20s02-datanode-d07n20s02.out
+d07n30s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n30s02-datanode-d07n30s02.out
+d07n19s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n19s01-datanode-d07n19s01.out
+d07n20s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n20s01-datanode-d07n20s01.out
+d07n25s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n25s02-datanode-d07n25s02.out
+d07n31s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n31s02-datanode-d07n31s02.out
+d07n31s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n31s01-datanode-d07n31s01.out
+d07n30s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n30s01-datanode-d07n30s01.out
+d07n39s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n39s01-datanode-d07n39s01.out
+d07n35s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n35s01-datanode-d07n35s01.out
+d07n24s01: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n24s01-datanode-d07n24s01.out
+d07n07s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-datanode-d07n07s02.out
+d07n07s02: starting secondarynamenode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-secondarynamenode-d07n07s02.out
+start jobtracker (mapred)
+starting jobtracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-jobtracker-d07n07s02.out
+d07n09s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n09s02-tasktracker-d07n09s02.out
+d07n18s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n18s01-tasktracker-d07n18s01.out
+d07n20s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n20s02-tasktracker-d07n20s02.out
+d07n29s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n29s02-tasktracker-d07n29s02.out
+d07n10s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n10s01-tasktracker-d07n10s01.out
+d07n30s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n30s02-tasktracker-d07n30s02.out
+d07n20s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n20s01-tasktracker-d07n20s01.out
+d07n25s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n25s02-tasktracker-d07n25s02.out
+d07n30s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n30s01-tasktracker-d07n30s01.out
+d07n19s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n19s01-tasktracker-d07n19s01.out
+d07n31s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n31s02-tasktracker-d07n31s02.out
+d07n24s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n24s01-tasktracker-d07n24s01.out
+d07n35s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n35s01-tasktracker-d07n35s01.out
+d07n31s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n31s01-tasktracker-d07n31s01.out
+d07n39s01: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n39s01-tasktracker-d07n39s01.out
+d07n07s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-tasktracker-d07n07s02.out
+copy file to dfs
+ls files in dfs
+Found 1 items
+-rw-r--r--   1 rajaramr supergroup    5050000 2014-12-06 21:45 /user/rajaramr/500K
+run computation
+Num reducers16
+Problem size 500000
+in_file 500K
+out_file result_500K
+path =/user/rajaramr/
+
+
+ JOB WAs SUCCESSFUL
+
+
+500001 ::time taken ::33016.164866 ms
+500000 ::estimated milli 33016 ms
+=================== TIME TAKEN ====================
+Task name ::attempt_201412062145_0001_m_000002_0 took 1685 ms
+Task name ::attempt_201412062145_0001_r_000014_0 took 9162 ms
+Task name ::attempt_201412062145_0001_r_000015_0 took 9276 ms
+Task name ::attempt_201412062145_0001_r_000001_0 took 9410 ms
+Task name ::attempt_201412062145_0001_r_000013_0 took 9380 ms
+Task name ::attempt_201412062145_0001_r_000006_0 took 9597 ms
+Task name ::attempt_201412062145_0001_r_000009_0 took 9604 ms
+Task name ::attempt_201412062145_0001_r_000000_0 took 10349 ms
+Task name ::attempt_201412062145_0001_r_000011_0 took 9762 ms
+Task name ::attempt_201412062145_0001_r_000012_0 took 10210 ms
+Task name ::attempt_201412062145_0001_r_000010_0 took 10333 ms
+Task name ::attempt_201412062145_0001_r_000007_0 took 10919 ms
+Task name ::attempt_201412062145_0001_r_000004_0 took 10735 ms
+Task name ::attempt_201412062145_0001_r_000008_0 took 10619 ms
+Task name ::attempt_201412062145_0001_r_000003_0 took 11120 ms
+Task name ::attempt_201412062145_0001_r_000002_0 took 11421 ms
+Task name ::attempt_201412062145_0001_r_000005_0 took 11569 ms
+Task name ::attempt_201412062145_0001_m_000001_0 took 2135 ms
+ls files in dfs
+copy files in dfs
+stop jobtracker (mapred)
+stopping jobtracker
+d07n29s02: stopping tasktracker
+d07n31s01: stopping tasktracker
+d07n20s01: stopping tasktracker
+d07n19s01: stopping tasktracker
+d07n30s01: stopping tasktracker
+d07n07s02: stopping tasktracker
+d07n31s02: stopping tasktracker
+d07n10s01: stopping tasktracker
+d07n09s02: stopping tasktracker
+d07n20s02: stopping tasktracker
+d07n18s01: stopping tasktracker
+d07n30s02: stopping tasktracker
+d07n39s01: stopping tasktracker
+d07n25s02: stopping tasktracker
+d07n24s01: stopping tasktracker
+d07n35s01: stopping tasktracker
+stop dfs
+stopping namenode
+d07n29s02: stopping datanode
+d07n30s02: stopping datanode
+d07n09s02: stopping datanode
+d07n18s01: stopping datanode
+d07n10s01: stopping datanode
+d07n20s02: stopping datanode
+d07n19s01: stopping datanode
+d07n30s01: stopping datanode
+d07n20s01: stopping datanode
+d07n31s02: stopping datanode
+d07n25s02: stopping datanode
+d07n35s01: stopping datanode
+d07n31s01: stopping datanode
+d07n24s01: stopping datanode
+d07n39s01: stopping datanode
+d07n07s02: stopping datanode
+d07n07s02: stopping secondarynamenode
+Clean up
+Number of Hadoop nodes specified by user: 16
+Received 16 nodes from PBS
+Clean up node: d07n07s02
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n09s02
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n10s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n18s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n19s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n20s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n20s02
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n24s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n25s02
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n29s02
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n30s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n30s02
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n31s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n31s02
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n35s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+Clean up node: d07n39s01
+rm -rf /scratch/hadoop-rajaramr/data /scratch/hadoop-rajaramr/log
+

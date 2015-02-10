@@ -1,0 +1,11 @@
+SLURM Enviroment Variables:
+Job ID = 3015751
+Job Name = SEQ_BSORT
+Job Node List = d07n10s01
+Number of Nodes = 1
+Tasks per Nodes = 1
+CPUs per task = 
+/scratch/jobid = /scratch/3015751
+submit Host = k07n14
+Subimt Directory = /ifs/user/rajaramr/3/Sort/Sequential
+

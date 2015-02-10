@@ -1,0 +1,48 @@
+SLURM Enviroment Variables:
+Job ID = 3095809
+Job Name = HD_BSORT
+Job Node List = d07n07s02,d07n08s02
+Number of Nodes = 2
+Tasks per Nodes = 1
+CPUs per task = 
+/scratch/jobid = /scratch/3095809
+submit Host = k07n14
+Subimt Directory = /ifs/user/rajaramr/4/hbsort
+
+MY_HADOOP_HOME=/util/myhadoop/myHadoop-0.2a_hadoop-1.1.1
+HADOOP_HOME=/util/hadoop/hadoop-1.1.1
+MyHadoop config directory=/ifs/user/rajaramr/4/hbsort/config
+Set up the configurations for myHadoop
+Number of nodes in nodelist=2
+Number of Hadoop nodes requested: 2
+Generation Hadoop configuration in directory: /ifs/user/rajaramr/4/hbsort/config
+Not persisting HDFS state
+Received 2 nodes from PBS
+Master is: d07n07s02
+Configuring node: d07n07s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Configuring node: d07n08s02
+rm -rf /scratch/hadoop-rajaramr/log; mkdir -p /scratch/hadoop-rajaramr/log
+rm -rf /scratch/hadoop-rajaramr/data; mkdir -p /scratch/hadoop-rajaramr/data
+Format HDFS
+start dfs
+starting namenode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-namenode-d07n07s02.out
+d07n07s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-datanode-d07n07s02.out
+d07n08s02: starting datanode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n08s02-datanode-d07n08s02.out
+d07n07s02: starting secondarynamenode, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-secondarynamenode-d07n07s02.out
+start jobtracker (mapred)
+starting jobtracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-jobtracker-d07n07s02.out
+d07n08s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n08s02-tasktracker-d07n08s02.out
+d07n07s02: starting tasktracker, logging to /scratch/hadoop-rajaramr/log/hadoop-rajaramr_d07n07s02-tasktracker-d07n07s02.out
+copy file to dfs
+ls files in dfs
+Found 1 items
+-rw-r--r--   1 rajaramr supergroup   59387587 2014-12-07 10:43 /user/rajaramr/5MILL
+run computation
+Num reducers2
+Problem size 5000000
+in_file 5MILL
+out_file result_5MILL
+path =/user/rajaramr/
+attempt_201412071043_0001_r_000001_0: 2 size 2500715
